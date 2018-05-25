@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>HTML to Text Converter</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <style>
+            body {
+                margin: 1em 1.5em;
+                text-align: center;
+            }
+            p {
+                width: 80%;
+                text-align: left;
+                margin: 1em auto;
+            }
+            textarea {
+                width: 80%;
+                display: block;
+                margin: .5em auto;
+                min-height: 6em;
+            }
+            button {
+                display: block;
+                margin: .5em .25em;
+            }
+            label {
+                display: block;
+                width: 80%;
+                margin: .5em auto;
+                text-align: left;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>HTML Encoder</h1>
+        <p>Encodes HTML markup for code display in an HTML page. Paste your HTML markup into the textarea, then use the buttons to Convert and Copy. My script automatically wraps the snippet in <code>&lt;code&gt;</code> tags.</p>
+        <form>
+            <div class="form-group">
+                <label for="html_input">Paste HTML markup here:</label>
+                <textarea id="html_input"></textarea>
+                <div class="checkbox">
+                    <label>
+                        <input id="wrap_in_code" type="checkbox" value="" checked>
+                            Wrap in <code>&lt;code&gt;</code> tags
+                    </label>
+                </div>
+                <div class="checkbox">
+                     <label>
+                        <input id="copy_to_clipboard" type="checkbox" value="" checked>
+                            Automtically copy to clipboard
+                     </label>
+                </div>
+                <button type="button" id="convert" class="btn btn-primary">Convert</button>
+                <button type="button" id="copy" class="btn btn-primary" disabled="true">Copy to clipboard</button>
+            </div>
+        </form>
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+          <script src="htmltotext.js"></script>
+    </body>
+</html>
