@@ -10,9 +10,16 @@
                 .replace(/</g, "&lt;")
                 .replace(/>/g, "&gt;");
             // console.log(html);
+            // Wrap in code tags.
             if ($('#wrap_in_code').is(":checked")) {
                 // console.log('wrap in code checked');
                 html = '<code>' + html + '</code>';
+            }
+            // console.log(html);
+            // Escape double quotes with slashes
+            // for JSON format.
+            if ($('#escape_double_quotes').is(":checked")) {
+                html = html.replace(/\"/g, '\\"');
             }
             // console.log(html);
             $('#html_input').val(html);
